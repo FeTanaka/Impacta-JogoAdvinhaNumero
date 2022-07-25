@@ -19,6 +19,10 @@
         <action
             android:id="@+id/action_chuteFragment_to_parabensFragment"
             app:destination="@id/parabensFragment" />
+        <argument
+            android:name="numeroRandomico"
+            app:argType="integer"
+            android:defaultValue="-1" />
     </fragment>
     <fragment
         android:id="@+id/chuteMaiorFragment"
@@ -28,6 +32,9 @@
         <action
             android:id="@+id/action_chuteMaiorFragment_to_chuteFragment"
             app:destination="@id/chuteFragment" />
+        <argument
+            android:name="numeroRandomico"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/chuteMenorFragment"
@@ -37,6 +44,9 @@
         <action
             android:id="@+id/action_chuteMenorFragment_to_chuteFragment"
             app:destination="@id/chuteFragment" />
+        <argument
+            android:name="numeroRandomico"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/parabensFragment"
