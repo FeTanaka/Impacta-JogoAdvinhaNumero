@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/chuteFragment">
 
+    <fragment
+        android:id="@+id/chuteFragment"
+        android:name="br.com.impacta.jogoadvinhanumero.ChuteFragment"
+        android:label="fragment_chute"
+        tools:layout="@layout/fragment_chute" >
+        <action
+            android:id="@+id/action_chuteFragment_to_chuteMaiorFragment"
+            app:destination="@id/chuteMaiorFragment" />
+        <action
+            android:id="@+id/action_chuteFragment_to_chuteMenorFragment"
+            app:destination="@id/chuteMenorFragment" />
+        <action
+            android:id="@+id/action_chuteFragment_to_parabensFragment"
+            app:destination="@id/parabensFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chuteMaiorFragment"
+        android:name="br.com.impacta.jogoadvinhanumero.ChuteMaiorFragment"
+        android:label="fragment_chute_maior"
+        tools:layout="@layout/fragment_chute_maior" >
+        <action
+            android:id="@+id/action_chuteMaiorFragment_to_chuteFragment"
+            app:destination="@id/chuteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chuteMenorFragment"
+        android:name="br.com.impacta.jogoadvinhanumero.ChuteMenorFragment"
+        android:label="fragment_chute_menor"
+        tools:layout="@layout/fragment_chute_menor" >
+        <action
+            android:id="@+id/action_chuteMenorFragment_to_chuteFragment"
+            app:destination="@id/chuteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parabensFragment"
+        android:name="br.com.impacta.jogoadvinhanumero.ParabensFragment"
+        android:label="fragment_parabens"
+        tools:layout="@layout/fragment_parabens" >
+        <action
+            android:id="@+id/action_parabensFragment_to_chuteFragment"
+            app:destination="@id/chuteFragment" />
+    </fragment>
 </navigation>

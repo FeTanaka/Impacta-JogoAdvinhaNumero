@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">JogoAdvinhaNumero</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="guess_title">Pensei em um número de 0 a 10.</string>
+    <string name="guess_number">Tente advinhar qual foi.</string>
+    <string name="guess">Chutar</string>
+    <string name="guess_higher">Seu chute foi muito alto. Tente novamente.</string>
+    <string name="guess_lower">Seu chute foi muito baixo. Tente novamente.</string>
+    <string name="try_again">Tente novamente</string>
+    <string name="congratulations">Parabéns!!! Você acertou!</string>
+    <string name="play_again">Jogue novamente</string>
+    <string name="user_input">Digite o seu chute.</string>
 </resources>
