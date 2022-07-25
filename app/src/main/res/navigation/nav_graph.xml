@@ -31,7 +31,9 @@
         tools:layout="@layout/fragment_chute_maior" >
         <action
             android:id="@+id/action_chuteMaiorFragment_to_chuteFragment"
-            app:destination="@id/chuteFragment" />
+            app:destination="@id/chuteFragment"
+            app:popUpTo="@id/chuteFragment"
+            app:popUpToInclusive="true" />
         <argument
             android:name="numeroRandomico"
             app:argType="integer" />
@@ -43,7 +45,9 @@
         tools:layout="@layout/fragment_chute_menor" >
         <action
             android:id="@+id/action_chuteMenorFragment_to_chuteFragment"
-            app:destination="@id/chuteFragment" />
+            app:destination="@id/chuteFragment"
+            app:popUpTo="@id/chuteFragment"
+            app:popUpToInclusive="true" />
         <argument
             android:name="numeroRandomico"
             app:argType="integer" />
@@ -55,6 +59,8 @@
         tools:layout="@layout/fragment_parabens" >
         <action
             android:id="@+id/action_parabensFragment_to_chuteFragment"
-            app:destination="@id/chuteFragment" />
+            app:destination="@id/chuteFragment"
+            app:popUpTo="@id/chuteFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
