@@ -26,9 +26,12 @@ class ChuteMenorFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // numero randomico que deve ser acertado pelo usuário atual
         var numeroRandomicoGerado: Int = args.numeroRandomico
 
         binding.button3.setOnClickListener {
+            // voltamos para o fragmento Chute para uma nova tentativa do usuário
             val action = ChuteMenorFragmentDirections.actionChuteMenorFragmentToChuteFragment(numeroRandomicoGerado)
             findNavController().navigate(action)
         }

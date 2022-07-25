@@ -30,23 +30,32 @@ class ChuteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Aqui verificamos se um número randomico já foi gerado
+        // identificamos se o número já foi gerado pois o valor do argumento é diferente de -1
+        // caso o número não tenha sido gerado, geramos um número inteiro randômico entre 0 e 10.
         val numeroRandomicoGerado = if (args.numeroRandomico == -1) {
             Random.nextInt(0, 10)
         } else {
             args.numeroRandomico
         }
-        Toast.makeText(context, "Número a ser acertado: ${numeroRandomicoGerado}", Toast.LENGTH_SHORT).show()
+        // Toast para facilitar os testes
+//        Toast.makeText(context, "Número a ser acertado: ${numeroRandomicoGerado}", Toast.LENGTH_SHORT).show()
+
 
         binding.button.setOnClickListener {
+            // Condicional caso o usuário não tenha digitado nada antes de apertar o botão.
             if (binding.editTextNumber.text.toString() == "") {
                 binding.editTextNumber.error = "Por favor digite um número."
             } else {
+                // pegamos o valor digitado pelo usuário
                 val chuteUsuario = binding.editTextNumber.text.toString().toInt()
+                // dado o valor digitado verificamos qual ação devemos tomar
                 val action = when {
                     chuteUsuario > numeroRandomicoGerado -> ChuteFragmentDirections.actionChuteFragmentToChuteMaiorFragment(numeroRandomicoGerado)
                     chuteUsuario < numeroRandomicoGerado -> ChuteFragmentDirections.actionChuteFragmentToChuteMenorFragment(numeroRandomicoGerado)
                     else -> ChuteFragmentDirections.actionChuteFragmentToParabensFragment()
                 }
+                // vamos para o fragmento determinado pela ação
                 findNavController().navigate(action)
             }
         }

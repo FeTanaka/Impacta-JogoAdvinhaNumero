@@ -26,6 +26,9 @@ class ParabensFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.button4.setOnClickListener {
+            // Voltamos para o fragmento Chute para começarmos uma nova rodada do jogo.
+            // Como o fragmento chute tem um valor padrão para o argumento, não precisamos passar nada.
+            // Poderiamos passar -1, caso quisessemos.
             val action = ParabensFragmentDirections.actionParabensFragmentToChuteFragment()
             findNavController().navigate(action)
         }
