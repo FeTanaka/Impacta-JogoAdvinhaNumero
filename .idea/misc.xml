@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/curso/AndroidStudioProjects/JogoAdvinhaNumero/app/src/main/res/layout/activity_main.xml" value="0.264945652173913" />
         <entry key="..\:/Users/curso/AndroidStudioProjects/JogoAdvinhaNumero/app/src/main/res/layout/fragment_chute.xml" value="0.3963541666666667" />
+        <entry key="..\:/Users/curso/AndroidStudioProjects/JogoAdvinhaNumero/app/src/main/res/layout/fragment_chute_maior.xml" value="0.264945652173913" />
+        <entry key="..\:/Users/curso/AndroidStudioProjects/JogoAdvinhaNumero/app/src/main/res/layout/fragment_chute_menor.xml" value="0.264945652173913" />
+        <entry key="..\:/Users/curso/AndroidStudioProjects/JogoAdvinhaNumero/app/src/main/res/layout/fragment_parabens.xml" value="0.264945652173913" />
       </map>
     </option>
   </component>
