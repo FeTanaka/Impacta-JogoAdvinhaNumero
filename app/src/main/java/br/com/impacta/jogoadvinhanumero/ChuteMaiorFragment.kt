@@ -5,16 +5,35 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
+import br.com.impacta.jogoadvinhanumero.databinding.FragmentChuteBinding
+import br.com.impacta.jogoadvinhanumero.databinding.FragmentChuteMaiorBinding
 
 
 class ChuteMaiorFragment : Fragment() {
 
+    private var _binding: FragmentChuteMaiorBinding? = null
+    private val binding get() = _binding!!
+    private val args: ChuteMaiorFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chute_maior, container, false)
+        _binding = FragmentChuteMaiorBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val numeroGeradoRandomico: Int = args.numeroRandomico
+
+        binding.button2.setOnClickListener {
+            val action = ChuteMaiorFragmentDirections.actionChuteMaiorFragmentToChuteFragment(numeroGeradoRandomico)
+            findNavController().navigate(action)
+        }
     }
 }
